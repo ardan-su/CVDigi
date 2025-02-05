@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="transition duration-500">
+
+<header class="fixed w-full bg-white shadow-md dark:bg-gray-900">
+    <nav class="container mx-auto p-4 flex justify-between items-center">
+        <h1 class="text-xl font-bold">DigitalCV</h1>
+        <ul class="flex space-x-4">
+            <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+            <li><a href="#about" class="hover:text-blue-500">About</a></li>
+            <li><a href="#portfolio" class="hover:text-blue-500">Portfolio</a></li>
+            <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+        </ul>
+        <button id="darkModeToggle" class="p-2 bg-gray-200 rounded">Click Disini</button>
+    </nav>
+</header>
+
+<section id="home" class="h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900">
+    <div class="text-center">
+        <h2 class="text-4xl font-bold">Halo, Saya <span class="text-blue-500">Ardan</span></h2>
+        <p class="text-lg mt-2">Seorang <span class="font-semibold">Web Developer</span></p>
+        <button class="mt-4 px-6 py-2 bg-blue-500 text-white rounded shadow hover:bg-blue-700">Lihat Portfolio</button>
+    </div>
+</section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white dark:bg-gray-800 dark:text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Tentang Saya</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center space-x-4">
+                <!-- Foto Profil -->
+                <img src="img/profile.jpg" alt="Foto Profil" class="w-40 h-40 rounded-full shadow-lg">
+
+            <div class="text-left max-w-md">
+                <p class="text-lg">Saya adalah seorang Web Developer yang berfokus pada desain dan pengalaman pengguna yang menarik serta responsif. Dengan pengalaman di berbagai proyek, saya siap membantu menciptakan solusi digital terbaik.</p>
+                <h3 class="mt-4 font-semibold">Keahlian Utama:</h3>
+                <ul class="list-disc pl-6 mt-2">
+                    <ul class="list-disc pl-6 mt-2">
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>TailwindCSS & Bootstrap</li>
+                        <li>UI/UX Design dengan Figma</li>
+                        <li>Pengembangan Frontend & Backend</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 bg-gray-100 dark:bg-gray-900">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-white">Portfolio</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Proyek 1 -->
+                <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg">
+                    <img src="img/project1.jpg" alt="Proyek 1" class="w-full h-48 object-cover rounded">
+                    <h3 class="text-xl font-bold mt-4 dark:text-white">EvolutionX</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Project Custom ROM untuk Poco M4 Pro | EvolutionX.</p>
+                    <a href="https://sourceforge.net/projects/fleurr/files/" target="_blank"
+                       class="inline-block mt-3 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">
+                        Lihat Proyek
+                    </a>
+                </div>
+    
+                <!-- Proyek 2 -->
+                <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg">
+                    <img src="img/project2.jpg" alt="Proyek 2" class="w-full h-48 object-cover rounded">
+                    <h3 class="text-xl font-bold mt-4 dark:text-white">PixelOs</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Project Custom ROM untuk Poco M4 Pro | PixelOs.</p>
+                    <a href="https://github.com/xiaomi-mt6781-dev/releases/releases/tag/PixelOS" target="_blank"
+                       class="inline-block mt-3 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">
+                        Lihat Proyek
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-200 dark:bg-gray-800 dark:text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2028 Ardan Fachrial Ramdani. All rights reserved.</p>
+            <div class="mt-4">
+                <a href="https://linkedin.com" class="mx-2">LinkedIn</a>
+                <a href="https://github.com/ardan-su" class="mx-2">GitHub</a>
+                <a href="ardanownersusu@gmail.com" class="mx-2">Gmail</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Fungsi untuk Scroll ke Portfolio Section
+        function scrollToPortfolio() {
+            document.querySelector('#portfolio').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Dark Mode Toggle
+        document.getElementById('darkModeToggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>
